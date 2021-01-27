@@ -1,1 +1,1 @@
-# english-for-kids
+# webpack-boilerplate

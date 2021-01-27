@@ -1,0 +1,210 @@
+.card-lesson {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.card-lesson .img-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 50px;
+    right: 10px;
+    background: #222;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.card-lesson:hover .img-box {
+    bottom: 80px;
+}
+
+.card-lesson .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.card-lesson .details {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 60px;
+    text-align: center;
+}
+
+.card-lesson .details .card-title {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    color: #777;
+    text-transform: uppercase;
+    margin-top: 35px;
+}
+
+.card-lesson .details p {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+    color: deeppink;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+}
+
+.body--dark .card-lesson .details p {
+    color: #ffbd08;
+}
+
+
+.turn-item-btn {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+    border: none;
+    opacity: 0;
+    background: url('/assets/img/rotate-light.svg');
+    background-size: cover;
+    transition: .3s;
+}
+
+.card-lesson:hover .turn-item-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.body--dark .turn-item-btn {
+    background: url('/assets/img/rotate-dark.svg');
+    background-size: cover;
+}
+
+.card-lesson .turn-item-btn:hover {
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.cards-item-lessons .card-lesson .details h2 {
+    margin-top: 35px;
+}
+
+.details .music-btn {
+    position: absolute;
+    display: block;
+    height: 27px;
+    width: 24px;
+    bottom: 0;
+    left: 0;
+    opacity: .6;
+    background: url('/assets/img/audio.svg');
+    background-size: cover;
+}
+
+.cards-item-lessons .card-lesson .details span:hover {
+    opacity: 1;
+}
+
+.flip-container {
+    perspective: 1000px;
+    margin: 0 auto;
+
+    display: block;
+}
+
+.flip-container--hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container--hover .flipper .front {
+    display: none;
+}
+
+.flip-container,
+.front,
+.back {
+    width: 100%;
+    height: 325px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    background: transparent;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.playing .card-lesson .details {
+    display: none;
+}
+
+.playing .card-lesson .img-box {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.playing .card-lesson:hover .img-box {
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    top: 18px;
+}
+
+.playing .card-lesson .turn-item-btn {
+    display: none;
+}
+
+.playing.done .card-lesson .front {
+    opacity: .5;
+}
+
+.playing.done .card-lesson .back {
+    opacity: 0;
+}
+
+.playing.done .card-lesson:hover .img-box {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.playing.done {
+    pointer-events: none;
+    cursor: default
+}

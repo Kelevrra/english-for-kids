@@ -1,0 +1,77 @@
+.navigation {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    width: fit-content;
+}
+
+.navigation-list {
+    position: fixed; 
+    top: 45px;
+    height: 100vh;
+    width: 30%;
+    background-color: white;
+    box-shadow: 5px 0 5px -5px rgb(89, 89, 89);
+    list-style: none;
+    padding: 0;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+.navigation-list--closed {
+    left: -100%;
+}
+
+.navigation-list--opened {
+    left: 0;
+}
+
+.navigation-item {
+    border-bottom: 1px solid rgb(203, 202, 202);
+    padding-left: 2rem;
+}
+
+.navigation-item a {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-decoration: none;
+    color: #2e2e2e;
+    display: block;
+    width: 100%;
+}
+
+.navigation-item a:hover {
+    color: deeppink;
+}
+
+.navigation-item--active a {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.body--dark .navigation .navigation-list {
+    background-color: #232323;
+}
+
+.body--dark .navigation .navigation-item a {
+    color: white;
+}
+
+.body--dark .navigation .navigation-item a:hover {
+    color: #ffbd08;
+}
+
+.body--dark .navigation .navigation-item--active a {
+    color: #ffbd08;
+}
+
+@media(max-width: 900px) {
+    .navigation-list {
+        width: 60%;
+    }
+}
+
+@media(max-width: 400px) {
+    .navigation-list {
+        width: 100%;
+    }
+}

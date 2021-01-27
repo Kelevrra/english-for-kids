@@ -1,0 +1,183 @@
+.header {
+    position: fixed;
+    top: 0;
+    border-bottom: 3px solid deeppink;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    z-index: 200;
+}
+
+.header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1020px;
+    height: 60px;
+}
+
+.header-button {
+    position: relative;
+    height: 30px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: deeppink;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: ease .4s;
+}
+#menu-btn {
+    border: none;
+    outline: none;
+}
+.header-button::before,
+.header-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 6px;
+    width: 35px;
+    background-color: white;
+    transition: ease .4s;
+}
+.header-button::before {
+    top: 6px;
+}
+.header-button::after {
+    bottom: 6px;
+}
+.header-button:focus,
+.header-button:focus::before,
+.header-button:focus::after {
+    background-color: deeppink;
+}
+.header-button--opened {
+    transform: rotate(90deg);
+    background-color: transparent;
+}
+.header-button--opened:focus {
+    background-color: transparent;
+}
+.header-button--opened::after,
+.header-button--opened::before {
+    background-color: deeppink;
+    transform: rotate(45deg);
+    top: 10px;
+}
+.header-button--opened::before {
+    background-color: deeppink;
+    transform: rotate(-45deg);
+}
+
+h1 {
+    color: #2e2e2e;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: deeppink;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #ffbd08;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ffbd08;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.header--dark {
+    border-bottom: 3px solid #ffbd08;
+    background-color: #232323;
+    transition: .3s;
+}
+
+.header--dark .header-button {
+    background-color: #ffbd08;
+    transition: .3s;
+}
+
+.header--dark .header-button::before,
+.header--dark .header-button::after {
+    background-color: #232323;
+}
+
+.header--dark .header-button--opened::before,
+.header--dark .header-button--opened::after {
+    background-color: #ffbd08;
+}
+
+.header--dark .header-button--opened {
+    background-color: #232323;
+}
+
+.header--dark h1 {
+    color: #ffbd08;
+    transition: .3s;
+}
+
+.header--dark .slider:before {
+    background-color: #232323;
+}
+
+.header-link {
+    text-decoration: none;
+}
+
+@media(max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.stars {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 320px;
+    margin-left: auto;
+}
+
+.stars img {
+    width: 38px;
+}

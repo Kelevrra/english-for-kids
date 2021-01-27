@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>English for kids</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header-inner">
+            <button id="menu-btn" class="header-button header-button--closed" type="button">
+                <span class="visually-hidden">open menu</span>
+            </button>
+            <a class="header-link" href="#">
+                <h1 class="header-title">
+                    English for kids
+                </h1>
+            </a>
+            <div class="header-input">
+                <label class="switch">
+                    <input type="checkbox" id="light">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <nav class="navigation" id="navigation"></nav>
+        <div class="stars"></div>
+    </header>
+    <div class="mode-input">
+        <span class="mode-input-title">train</span>
+        <label class="switch mode-switch">
+            <input type="checkbox" id="mode">
+            <span class="slider mode-slider"></span>
+        </label>
+        <audio class="correct-song">
+            <source src="assets/audio/correct.mp3">
+        </audio>
+        <audio class="error-song">
+            <source src="assets/audio/error.mp3">
+        </audio>
+    </div>
+    <main class="main">
+        <nav class="navigation">
+            <ul id="nav-list" class="navigation-list navigation-list--closed">
+            </ul>
+        </nav>
+        <div id="app" class="app"></div>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>
+                <span>2020 © English for Kids.</span>
+                <span>Task done by <a href="https://github.com/Kelevrra">Kelevrra</a></span>
+            </p>
+            <a class="footer-copyright-link" href="https://rs.school/js/">
+                <img src="https://rs.school/images/rs_school_js.svg" width="60" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
